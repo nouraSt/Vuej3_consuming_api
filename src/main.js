@@ -8,9 +8,10 @@ import "bootstrap";
 import "./assets/main.css";
 import "./assets/css/styles.css";
 import axios from 'axios';
+import store from './store'
 
 
-const app = createApp(App);
+const app = createApp(App).use(store);
 
 axios.defaults.baseURL = 'http://localhost:8000/api/';
 axios.defaults.headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`;

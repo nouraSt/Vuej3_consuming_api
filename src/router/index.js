@@ -36,6 +36,11 @@ const router = createRouter({
       path:"/dashboard/users/list",
       name:"userslist",
       component:()=> import("../views/admin/dashboard/users/ListUsers.vue"),
+    },
+    {
+      path:"/dashboard/users/create",
+      name:"createusers",
+      component:()=> import("../views/admin/dashboard/users/CreateUser.vue"),
     }
   ],
 });
